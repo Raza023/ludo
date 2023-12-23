@@ -87,7 +87,6 @@ document.getElementById("btn").onclick=function()
 	document.getElementById("btn").style.display = "none";
 	let rand = getRndInteger(1, 6);
 	document.getElementById("num").innerText=rand;
-	
 	if(plr1==true)
 	{
 		document.getElementById("plr").innerHTML = ""+person1+"'s turn:";
@@ -155,7 +154,6 @@ document.getElementById("btn").onclick=function()
 							var fragment = document.createDocumentFragment();
 							fragment.appendChild(document.getElementById('gp1'));
 							document.getElementById(gpath1[gind1]).appendChild(fragment);
-							
 							gcounter=gcounter-1;
 							glock= true;
 							galive1=true;
@@ -264,7 +262,6 @@ document.getElementById("btn").onclick=function()
 						}
 					}
 				}
-				
 				document.getElementById("gp2").onclick=function()
 				{
 					
@@ -387,7 +384,6 @@ document.getElementById("btn").onclick=function()
 						}
 					}
 				}
-				
 				document.getElementById("gp3").onclick=function()
 				{
 					
@@ -510,10 +506,8 @@ document.getElementById("btn").onclick=function()
 						}
 					}
 				}
-				
 				document.getElementById("gp4").onclick=function()
 				{
-					
 					if(galive4==false)
 					{
 						let x=document.getElementById("gspace4").innerHTML;
@@ -543,7 +537,6 @@ document.getElementById("btn").onclick=function()
 					}
 					else
 					{
-						
 						if(gind4<=56 && glock == false && plr1==true)
 						{
 							gstuck4=false;
@@ -573,8 +566,7 @@ document.getElementById("btn").onclick=function()
 							{
 								var fragment = document.createDocumentFragment();
 								fragment.appendChild(document.getElementById('gp4'));
-								document.getElementById(gpath4[gind4]).appendChild(fragment);
-								
+								document.getElementById(gpath4[gind4]).appendChild(fragment);	
 								if(document.getElementById(gpath4[gind4]).innerHTML == document.getElementById('bp1').outerHTML + document.getElementById('gp4').outerHTML && gpath4[gind4]!='g5' && gpath4[gind4]!='g16' && gpath4[gind4]!='r4' && gpath4[gind4]!='r9' && gpath4[gind4]!='y10' && gpath4[gind4]!='y15' && gpath4[gind4]!='b3' && gpath4[gind4]!='b14')
 								{
 									var killFrag = document.createDocumentFragment();
@@ -620,7 +612,6 @@ document.getElementById("btn").onclick=function()
 									bstuck4=true;
 								}
 								glock=true;
-
 								document.getElementById("btn").style.display = "block";
 								document.getElementById("gp1").style.borderStyle = "solid";
 								document.getElementById("gp1").style.borderWidth = "1px";
@@ -646,7 +637,6 @@ document.getElementById("btn").onclick=function()
 	else if(plr2==true)
 	{
 		document.getElementById("plr").innerHTML= ""+person2+"'s turn:";
-		
 		if(document.getElementById("num").innerText == "1")
 		{
 			bOneToFive();
@@ -697,7 +687,6 @@ document.getElementById("btn").onclick=function()
 					document.getElementById("bp4").style.borderStyle = "double";
 					document.getElementById("bp4").style.borderWidth = "3px";
 				}
-				
 				document.getElementById("bp1").onclick=function()
 				{
 					if(balive1==false)
@@ -2031,7 +2020,6 @@ function bOneToFive()
 	plr2=false;
 	plr1=true;
 }
-
 
 function getRndInteger(min, max)
 {
